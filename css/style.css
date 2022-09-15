@@ -18,3 +18,7 @@ li {
   background-color: beige;
   margin-bottom: 0.5rem;
 }
+
+.done {
+  text-decoration: line-through;
+}

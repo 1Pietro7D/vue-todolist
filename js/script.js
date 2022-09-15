@@ -4,33 +4,35 @@ const app = new Vue({
     todos: [
       {
         article: "pasta",
-        justDo: true,
+        done: true,
       },
       {
         article: "cheese",
-        justDo: false,
+        done: false,
       },
       {
         article: "bread",
-        justDo: false,
+        done: false,
       },
       {
         article: "meat",
-        justDo: false,
+        done: false,
       },
     ],
     something: "",
-    newTodo: {
-      article: "",
-      justDo: true,
-    },
+
     archive: [],
   },
   methods: {
     addItem() {
+      let newTodo = {
+        article: "",
+        done: false,
+      };
       console.log("miao");
-      this.newTodo.article = this.something;
-      this.todos.push(this.newTodo);
+      newTodo.article = this.something;
+      this.todos.push(newTodo);
+      this.something = "";
     },
     deleteItem(index) {
       console.log(this.todos);
