@@ -45,10 +45,16 @@
   <body>
     <!-- container Vue -->
     <div id="app">
-      <header>
+      <div class="container">
         <h1>Todo List</h1>
-      </header>
-      <main>
+
+        <input
+          type="text"
+          placeholder="Add new list item"
+          v-model="something"
+          @keyUp.enter="addItem"
+        />
+
         <ol>
           <li v-for="(todo, index) in todos">
             {{ index+1 }} {{ todo.article }}
@@ -57,7 +63,11 @@
             </span>
           </li>
         </ol>
-      </main>
+        <h2>Archive</h2>
+        <ul>
+          <li v-for="(todo, index) in archive">{{ archive.article }}</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
