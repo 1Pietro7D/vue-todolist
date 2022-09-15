@@ -37,9 +37,9 @@ const app = new Vue({
     deleteItem(index) {
       console.log(this.todos);
       this.todos.splice(index, 1);
-      // COSE STRANE DA QUI IN POI
-      this.archive.push(this.todos[index].article);
-      console.log(this.archive);
+      // COSE STRANE DA QUI IN POI poichè splice in Vue effettua delle trasformazioni
+      // this.archive.push(this.todos[index].article);
+      // console.log(this.archive);
     },
     toggleDone(todo) {
       todo.done = !todo.done;

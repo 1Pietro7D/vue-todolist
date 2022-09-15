@@ -54,7 +54,7 @@
           v-model="something"
           @keyUp.enter="addItem"
         />
-
+        <button type="button" @click="addItem">Aggiungi</button>
         <ol>
           <li v-for="(todo, index) in todos" :class="{ done: todo.done }">
             <span @click="toggleDone(todo)"
