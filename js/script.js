@@ -29,7 +29,7 @@ const app = new Vue({
         article: "",
         done: false,
       };
-      console.log("miao");
+
       newTodo.article = this.something;
       this.todos.push(newTodo);
       this.something = "";
@@ -40,6 +40,9 @@ const app = new Vue({
       // COSE STRANE DA QUI IN POI
       this.archive.push(this.todos[index].article);
       console.log(this.archive);
+    },
+    toggleDone(todo) {
+      todo.done = !todo.done;
     },
   },
 });

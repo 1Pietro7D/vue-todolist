@@ -57,7 +57,9 @@
 
         <ol>
           <li v-for="(todo, index) in todos" :class="{ done: todo.done }">
-            {{ index+1 }} {{ todo.article }}
+            <span @click="toggleDone(todo)"
+              >{{ index+1 }} {{ todo.article }}</span
+            >
             <span @click="deleteItem(index)">
               <i class="fa-solid fa-x"></i>
             </span>
