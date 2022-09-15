@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+header h1 {
+  text-align: center;
+  padding: 1.5rem;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+li {
+  list-style: none;
+  padding: 1rem;
+  background-color: beige;
+  margin-bottom: 0.5rem;
+}

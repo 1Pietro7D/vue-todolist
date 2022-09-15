@@ -23,7 +23,7 @@
     />
     <!-- #region css-->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
+
     <!-- #endregion css-->
 
     <!-- #region javascript-->
@@ -40,10 +40,24 @@
       rel="icon"
       href="https://emoji.slack-edge.com/T91QPE3BP/vue/39ab4efceb6ac665.png"
     />
-    <title>Vue Carousel</title>
+    <title>Todo List</title>
   </head>
   <body>
     <!-- container Vue -->
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      <main>
+        <ol>
+          <li v-for="(todo, index) in todos">
+            {{ index+1 }} {{ todo.article }}
+            <span @click="deleteItem(index)">
+              <i class="fa-solid fa-x"></i>
+            </span>
+          </li>
+        </ol>
+      </main>
+    </div>
   </body>
 </html>
